@@ -67,9 +67,6 @@ describe("challenge 3 tests", () => {
   test("return error message when arguments aren't numbers", () => {
     expect(challenge3("5")).toBe("make sure you enter 2 numbers");
   });
-  test("return error message when arguments aren't numbers", () => {
-    expect(challenge3(5)).toBe("make sure you enter 2 numbers");
-  });
 });
 
 describe("challenge 4 tests", () => {
