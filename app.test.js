@@ -13,6 +13,21 @@ const {
 } = require("./app");
 // file path
 describe("challenge1 tests", () => {
+  test("challenge 1 to return words breakfast lunch and dinner with a colon after (breakfast:pancakes), followed by the food", () => {
+    let value = challenge1("pancakes", "BLT", "steak and chips")
+      .replace(/\s/g, "")
+      .toLowerCase();
+      let meals = ['breakfast:', 'lunch:', 'dinner:']
+      let res = []
+    for(let i = 0; i < 3; i++) {
+      if(value.includes(meals[i])){
+        res.push(true)
+      }else {
+        res.push(false)
+      }
+    }
+    expect(res).not.toContain(false);
+  });
   test("challenge 1 returns pancakes, BLT, steak and chips", () => {
     let value = challenge1("pancakes", "BLT", "steak and chips")
       .replace(/\s/g, "")
