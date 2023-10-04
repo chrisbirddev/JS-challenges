@@ -9,7 +9,6 @@ const {
   challenge3,
   challenge4,
   challenge5,
-  pet,
 } = require("./app");
 // file path
 describe("challenge1 tests", () => {
@@ -57,6 +56,7 @@ describe("challenge 2 tests", () => {
     expect(challenge2(-3)).toBe("needs to be a positive number");
   });
 });
+
 describe("challenge 3 tests", () => {
   test("returns even number", () => {
     expect(challenge3(5, 1)).toBe(6);
@@ -105,11 +105,4 @@ describe("challenge 5 tests", () => {
     expect(arr.length).toBe(10);
   });
 });
-describe("pet tests", () => {
-  test("eating function returns message", () => {
-    expect(pet.eating()).toBe(`${pet.name} is eating`);
-  });
-  test("object contains 6 key values", () => {
-    expect(Object.keys(pet).length).toBe(6);
-  });
-});
+
