@@ -11,14 +11,17 @@ const {
   challenge5,
   pet,
 } = require("./app");
-            // file path
-test("challenge 1 returns pancakes, BLT, steak and chips", () => {
-  let value = challenge1("pancakes", "BLT", "steak and chips")
-    .replace(/\s/g, "")
-    .toLowerCase();
+// file path
+describe("challenge1 tests", () => {
+  test("challenge 1 returns pancakes, BLT, steak and chips", () => {
+    let value = challenge1("pancakes", "BLT", "steak and chips")
+      .replace(/\s/g, "")
+      .toLowerCase();
 
-  expect(value).toBe("breakfast:pancakes,lunch:blt,dinner:steakandchips");
-});
+    expect(value).toBe("breakfast:pancakes,lunch:blt,dinner:steakandchips");
+  });
+})
+
 describe("challenge 2 tests", () => {
   test("15 will return fizz buzz", () => {
     expect(challenge2(15)).toBe("fizz buzz");
